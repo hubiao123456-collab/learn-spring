@@ -1,0 +1,5 @@
+rootProject.name = 'spring-boot-demo-00003'
+include 'demo01'
+include 'demo02'
+include 'demo03'
+
