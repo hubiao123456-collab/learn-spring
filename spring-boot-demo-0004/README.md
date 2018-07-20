@@ -2,6 +2,7 @@
 
 ## demo02: 获取参数
 
+```
 ▶ gradle build
 ▶ java -jar ./build/libs/demo02-0.0.1-SNAPSHOT.jar  --msg=hi test.txt
 
@@ -37,6 +38,7 @@ hi2
 ------
 获取无选项指定的参数
 test.txt
+```
 
 
 ## demo03: 多个runner
@@ -47,4 +49,4 @@ test.txt
 
 ## demo06: 和SpringApp放在一起
 
-demo07: 和commandline 的顺序问题。
+## demo07: 和commandline 的顺序问题。
