@@ -177,15 +177,4 @@ public Greeting greeting3(@RequestParam(value="name", defaultValue="World") Stri
 ### 如果POST的数据是JSON
 一个简单的方式是把请求体作为一个字符串拿出来。
 
-### 自定义logger
-
-
-## 004. 一个基于spring-boot的纯java项目
-
-见 [spring-boot-demo-004](spring-boot-demo-004)。
-
-BusinessService 类是一个 @Service，启动 DemoApplication 后，BusinessService的构造函数先执行，然后被@PostConstruct修饰的postConstruct执行。
-
-BusinessService 中的 sayhello 私有变量会被自动装配。
-
 
