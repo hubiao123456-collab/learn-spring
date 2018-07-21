@@ -1,8 +1,5 @@
 package hello;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 public class Greeting {
 
     private long id;

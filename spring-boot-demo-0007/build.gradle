@@ -27,8 +27,5 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml")
-    testCompile('org.springframework.boot:jackson-dataformat-xml')
-    testCompile('com.jayway.jsonpath:json-path')
 }
 
