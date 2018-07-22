@@ -3,6 +3,8 @@ package hello;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -39,5 +41,20 @@ public class GreetingController {
         System.out.println(headers.get("User-Agent")); // get 方法返回 List<String>
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
+    }
+
+    /**
+     * 设置HTTP响应头
+     * @param name
+     * @return
+     */
+    @RequestMapping(value = "/greeting4", method = RequestMethod.POST)
+    public ResponseEntity<Greeting> greeting4(@RequestParam(value="name", defaultValue="World") String name) {
+        Greeting greeting= new Greeting(counter.incrementAndGet(), String.format(template, name));
+
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.set("MyResponseHeader", "MyValue");
+
+        return new ResponseEntity<>(greeting, responseHeaders, HttpStatus.OK);
     }
 }
