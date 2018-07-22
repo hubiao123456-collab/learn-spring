@@ -28,7 +28,7 @@ public class CustomExceptionHandler {
     @ExceptionHandler({CustomException02.class,})
     @ResponseBody
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
-    public final BaseResponse handleCustomException02Exception(CustomException01 ex, WebRequest request) throws Exception {
+    public final BaseResponse handleCustomException02Exception(CustomException02 ex, WebRequest request) throws Exception {
         return BaseResponse.fail("CustomException02异常", null);
     }
 
