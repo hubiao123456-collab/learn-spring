@@ -13,5 +13,5 @@ public class GreetingController {
     public BaseResponse greeting1(@RequestBody GreetingRequest request) {
         return BaseResponse.success("", new GreetingResponse(counter.incrementAndGet(), String.format(template, request.getMsg())));
     }
-    
+
 }
