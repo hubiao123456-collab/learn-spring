@@ -24,18 +24,18 @@ public class AppConfig {
     }
 
     @Bean
-    public Person person01(@Qualifier("book01") Book book) {
+    public Person person01(Book book01) {
         Person person = new Person();
         person.name = "曹夢阮";
-        person.book = book;
+        person.book = book01;
         return person;
     }
 
     @Bean
-    public Person person02(@Qualifier("book02") Book book) {
+    public Person person02(Book book02) {
         Person person = new Person();
         person.name = "曹雪芹";
-        person.book = book;
+        person.book = book02;
         return person;
     }
 

@@ -13,16 +13,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Demo01Application implements CommandLineRunner {
 
     @Autowired
-    private Book book;
+    private Book theBook;
 
     @Autowired
-    private Person person;
+    private Person thePerson;
 
     @Override
     public void run(String... args) throws Exception {
-        log.info("book.title: {}", book.title);
-        log.info("person.name: {}", person.name);
-        log.info("person.book.title: {}", person.book.title);
+        log.info("theBook.title: {}", theBook.title);
+        log.info("thePerson.name: {}", thePerson.name);
+        log.info("thePerson.theBook.title: {}", thePerson.book.title);
     }
 
     public static void main(String[] args) {

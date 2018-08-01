@@ -8,21 +8,21 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    @Bean(name="石头记")
+    @Bean
     public Book getBook01() {
         Book book = new Book();
         book.title = "石头记";
         return book;
     }
 
-    @Bean(name="红楼梦")
+    @Bean
     public Book getBook02() {
         Book book = new Book();
         book.title = "红楼梦";
         return book;
     }
 
-    @Bean(name="曹夢阮")
+    @Bean
     public Person getPerson01(Book book) {
         Person person = new Person();
         person.name = "曹夢阮";
@@ -30,7 +30,7 @@ public class AppConfig {
         return person;
     }
 
-    @Bean(name="曹雪芹")
+    @Bean
     public Person getPerson02(Book book) {
         Person person = new Person();
         person.name = "曹雪芹";
