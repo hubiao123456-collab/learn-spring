@@ -5,7 +5,9 @@ apply plugin: 'java'
 
 sourceCompatibility = 1.8
 
+
 repositories {
+    maven { url 'http://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
     mavenCentral()
 }
 

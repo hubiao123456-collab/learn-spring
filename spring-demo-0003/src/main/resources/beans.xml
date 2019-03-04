@@ -3,16 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
+    <!-- 注意这个新引入的 Spring 类  -->
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 
-    <bean id="boss" class="demo.bean.Boss">
+    <bean id="ltt" class="demo.bean.Person">
+        <!-- 这里不再注入其他bean -->
     </bean>
-    <bean id="office" class="demo.bean.Office">
-        <property name="officeNo" value="002"/>
+    <bean id="address" class="demo.bean.Address" scope="singleton">
+        <property name="province" value="上海"/>
     </bean>
-    <bean id="car" class="demo.bean.Car" scope="singleton">
-        <property name="brand" value=" 红旗 CA72"/>
-        <property name="price" value="2000"/>
-    </bean>
+
 
 </beans>
