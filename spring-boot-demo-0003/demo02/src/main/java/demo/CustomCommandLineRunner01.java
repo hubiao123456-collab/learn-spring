@@ -5,7 +5,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-@Order(1)
+@Order(1) // 值越小，越先执行
 public class CustomCommandLineRunner01 implements CommandLineRunner {
 
     @Override
