@@ -15,11 +15,19 @@ public class AppConfig {
         return book;
     }
 
+//    @Bean
+//    public Person getPerson(Book book) {
+//        Person person = new Person();
+//        person.name = "人名";
+//        person.book = book;
+//        return person;
+//    }
+
     @Bean
-    public Person getPerson(Book book) {
+    public Person getPerson() {
         Person person = new Person();
         person.name = "人名";
-        person.book = book;
+        person.book = getBook();  // 直接调用 getBook 方法
         return person;
     }
 
