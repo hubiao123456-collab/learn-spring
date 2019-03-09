@@ -27,7 +27,7 @@ public class GreetingController {
     @RequestMapping(value = "/greeting2", method = RequestMethod.POST)
     public Greeting greeting2(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
-                String.format(template, name));
+                String.format("Hello, %s!", name));
     }
 
     /**
@@ -40,7 +40,7 @@ public class GreetingController {
     public Greeting greeting3(@RequestParam(value="name", defaultValue="World") String name, @RequestHeader HttpHeaders headers) {
         System.out.println(headers.get("User-Agent")); // get 方法返回 List<String>
         return new Greeting(counter.incrementAndGet(),
-                String.format(template, name));
+                String.format("Hello, %s!", name));
     }
 
     /**
@@ -50,7 +50,7 @@ public class GreetingController {
      */
     @RequestMapping(value = "/greeting4", method = RequestMethod.POST)
     public ResponseEntity<Greeting> greeting4(@RequestParam(value="name", defaultValue="World") String name) {
-        Greeting greeting= new Greeting(counter.incrementAndGet(), String.format(template, name));
+        Greeting greeting= new Greeting(counter.incrementAndGet(), String.format("Hello, %s!", name));
 
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.set("MyResponseHeader", "MyValue");
