@@ -9,7 +9,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class BaseResponse implements Serializable {
 
-    Boolean isSuccess;
+    Boolean success;
     String msg;
     Object result;
 
