@@ -16,8 +16,6 @@ public class GreetingController {
 
     /**
      * 只允许 HTTP POST 方法
-     * @param name
-     * @return
      */
     @RequestMapping(value = "/greeting1", method = RequestMethod.POST)
     public Greeting greeting1(@RequestParam(value="name", defaultValue="World") String name) {

@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.util.Set;
 
-@ControllerAdvice
+@ControllerAdvice // 注意，这个必须有，用于声明是对 controller 控制器的增强。
 public class CustomExceptionHandler {
 
     @ExceptionHandler({CustomException01.class,})
