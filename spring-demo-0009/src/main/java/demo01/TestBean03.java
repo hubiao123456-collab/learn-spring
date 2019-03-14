@@ -14,17 +14,17 @@ public class TestBean03 implements InitializingBean, ApplicationContextAware, Ap
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("TestBean03 afterPropertiesSet");
+        System.out.println(this.getClass().getCanonicalName() + " afterPropertiesSet");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("TestBean03 setApplicationContext");
+        System.out.println(this.getClass().getCanonicalName() + " setApplicationContext");
     }
 
     @Override
     public void onApplicationEvent(ApplicationEvent event) {
-        System.out.println("TestBean03 event: " + event.getClass().getCanonicalName());
+        System.out.println(this.getClass().getCanonicalName() + " event: " + event.getClass().getCanonicalName());
     }
 
 

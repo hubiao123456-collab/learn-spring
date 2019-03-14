@@ -11,22 +11,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestBean01 implements InitializingBean, ApplicationContextAware, ApplicationListener {
 
-
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("TestBean01 afterPropertiesSet");
+        System.out.println(this.getClass().getCanonicalName() + " afterPropertiesSet");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("TestBean01 setApplicationContext");
+        System.out.println(this.getClass().getCanonicalName() + " setApplicationContext");
         applicationContext.getBean(TestBean03.class);
     }
 
     @Override
     public void onApplicationEvent(ApplicationEvent event) {
-        System.out.println("TestBean01 event: " + event.getClass().getCanonicalName());
+        System.out.println(this.getClass().getCanonicalName() + " event: " + event.getClass().getCanonicalName());
     }
-
-
 }
