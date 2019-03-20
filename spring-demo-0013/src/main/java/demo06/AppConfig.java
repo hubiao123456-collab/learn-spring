@@ -7,7 +7,6 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
-import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.sql.DataSource;
@@ -36,14 +35,6 @@ public class AppConfig {
         txManager.setDataSource(dataSource());
         return txManager;
     }
-
-//    @Bean
-//    public TransactionDefinition transactionDefinition() {
-//        DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-//        def.setIsolationLevel(TransactionDefinition.ISOLATION_REPEATABLE_READ);
-//        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
-//        return def;
-//    }
 
     @Bean
     public TransactionTemplate transactionTemplate() {
