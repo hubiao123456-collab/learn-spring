@@ -36,11 +36,12 @@ public class AppConfig {
         return txManager;
     }
 
+    // 事务配置
     @Bean
     public TransactionDefinition transactionDefinition() {
         DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-        def.setIsolationLevel(TransactionDefinition.ISOLATION_REPEATABLE_READ);
-        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
+        def.setIsolationLevel(TransactionDefinition.ISOLATION_REPEATABLE_READ);  // 指定隔离级别为可重复读
+        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);  // 指定事务传播方式
         return def;
     }
 

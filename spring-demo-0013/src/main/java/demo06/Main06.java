@@ -11,6 +11,7 @@ public class Main06 {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Main06.class);
 
+        System.out.println("开始时：");
         UserManager userManager = ctx.getBean(UserManager.class);
 
         System.out.println(userManager.queryAllUser());
@@ -21,7 +22,7 @@ public class Main06 {
             System.out.println("异常信息: "+ex.getMessage());
         }
 
-        System.out.println("事务已经回滚，再查看数据");
+        System.out.println("事务已经回滚，再查看数据：");
         System.out.println(userManager.queryAllUser());
 
     }

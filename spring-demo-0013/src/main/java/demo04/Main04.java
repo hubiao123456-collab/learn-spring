@@ -16,22 +16,26 @@ public class Main04 {
         PlatformTransactionManager txManager = ctx.getBean(PlatformTransactionManager.class);
         TransactionDefinition txDef = ctx.getBean(TransactionDefinition.class);
 
+        System.out.println("开始时：");
         System.out.println(userManager.queryAllUser());
 
-
-        TransactionStatus txStatus = txManager.getTransaction(txDef);
+        System.out.println("进入事务：");
+        TransactionStatus txStatus = txManager.getTransaction(txDef); // 若参数为null，则为默认的事务配置
         try {
-            System.out.println("插入新数据，查看数据");
             userManager.add("test", "test@lttdev.com", "test");
+            System.out.println("插入新数据后：");
             System.out.println(userManager.queryAllUser());
-            throw new RuntimeException("ex");
+            if (1==1) {
+                throw new RuntimeException("ex");
+            }
+            System.out.println("提交事务：");
+            txManager.commit(txStatus);
         } catch (Exception ex) {
             txManager.rollback(txStatus);
         }
 
-        System.out.println("事务已经回滚，再查看数据");
+        System.out.println("事务已经回滚，再查看数据：");
         System.out.println(userManager.queryAllUser());
-
     }
 
 }

@@ -37,20 +37,13 @@ public class AppConfig {
         return txManager;
     }
 
-//    @Bean
-//    public TransactionDefinition transactionDefinition() {
-//        DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-//        def.setIsolationLevel(TransactionDefinition.ISOLATION_REPEATABLE_READ);
-//        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
-//        return def;
-//    }
 
     @Bean
     public TransactionTemplate transactionTemplate() {
         TransactionTemplate txTpl = new TransactionTemplate();
         txTpl.setTransactionManager(transactionManager());
-        txTpl.setIsolationLevel(TransactionDefinition.ISOLATION_REPEATABLE_READ);
-        txTpl.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
+        txTpl.setIsolationLevel(TransactionDefinition.ISOLATION_REPEATABLE_READ);   // 设置隔离别为为可重复读
+        txTpl.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);   // 传播方式
         return txTpl;
     }
 
