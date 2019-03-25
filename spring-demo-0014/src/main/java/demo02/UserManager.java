@@ -42,8 +42,6 @@ public class UserManager {
 
     public void addWithRuntimeExceptionWithoutTransactional() {
         self.addWithRuntimeException();
-//        self.self.addWithRuntimeException();
-//        addWithRuntimeException();
     }
 
     @Transactional

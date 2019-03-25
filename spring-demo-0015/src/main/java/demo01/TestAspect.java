@@ -6,9 +6,6 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-/**
- * @Aspect 和 @Component 都要有
- */
 @Aspect
 @Component
 public class TestAspect {
