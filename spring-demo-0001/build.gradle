@@ -15,6 +15,6 @@ allprojects {
 
 
 dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version: '5.0.6.RELEASE'
+//    compile group: 'org.springframework', name: 'spring-core', version: '5.0.6.RELEASE'
     compile group: 'org.springframework', name: 'spring-context', version: '5.0.6.RELEASE'
 }
