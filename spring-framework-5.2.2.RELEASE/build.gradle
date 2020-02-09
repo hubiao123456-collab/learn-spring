@@ -36,6 +36,21 @@ ext {
 	}
 }
 
+
+//allprojects {
+//	repositories {
+//		maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+//		maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+//		maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+//		maven { url 'https://maven.aliyun.com/nexus/content/repositories/spring' }
+//		maven { url 'https://maven.aliyun.com/nexus/content/repositories/spring-plugin' }
+//		maven { url 'https://maven.aliyun.com/nexus/content/repositories/grails-core' }
+//		maven { url 'https://maven.aliyun.com/nexus/content/repositories/apache-snapshots' }
+//		mavenLocal()
+//		mavenCentral()
+//	}
+//}
+
 configure(allprojects) { project ->
 	apply plugin: "io.spring.dependency-management"
 
@@ -424,5 +439,12 @@ configure(rootProject) {
 				artifact distZip
 			}
 		}
+	}
+}
+
+
+project(':demo-001') {
+	dependencies {
+		compile project(":spring-context")
 	}
 }
