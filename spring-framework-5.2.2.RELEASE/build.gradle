@@ -448,3 +448,15 @@ project(':demo-001') {
 		compile project(":spring-context")
 	}
 }
+
+project(':demo-002') {
+	dependencies {
+		compile project(":spring-context")
+	}
+}
+
+project(':demo-003') {
+	dependencies {
+		compile project(":spring-context")
+	}
+}

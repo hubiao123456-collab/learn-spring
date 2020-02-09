@@ -33,6 +33,8 @@ include "framework-bom"
 include "integration-tests"
 
 include "demo-001"
+include "demo-002"
+include "demo-003"
 
 rootProject.name = "spring"
 rootProject.children.each {project ->
