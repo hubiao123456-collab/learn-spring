@@ -15,9 +15,13 @@ import javax.annotation.PostConstruct;
 @Component
 public class Bean01 implements InitializingBean, ApplicationContextAware, ApplicationListener<ApplicationEvent> {
 
+//	@Autowired
+//	private Bean02 bean02;
+
 	public Bean01() {
 		Utils.log("%s construct", getClassName());
 	}
+
 
 	@PostConstruct
 	public void postConstruct() {
@@ -26,21 +30,23 @@ public class Bean01 implements InitializingBean, ApplicationContextAware, Applic
 
 	}
 
-
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		Utils.sleep(3000);
 		Utils.log("%s InitializingBean.afterPropertiesSet", getClassName());
+
 	}
 
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		Utils.log("%s ApplicationContextAware.setApplicationContext: %s", getClassName(), applicationContext);
+
 	}
 
 	@Override
 	public void onApplicationEvent(ApplicationEvent event) {
 		Utils.log("%s ApplicationListener.onApplicationEvent: %s", getClassName(), event);
+		throw new RuntimeException("自定义异常");
 	}
 
 	private String getClassName() {

@@ -36,6 +36,7 @@ include "demo-001"
 include "demo-002"
 include "demo-003"
 include "demo-004"
+include "demo-005"
 
 rootProject.name = "spring"
 rootProject.children.each {project ->

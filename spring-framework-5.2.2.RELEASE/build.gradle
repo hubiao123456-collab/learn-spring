@@ -466,3 +466,9 @@ project(':demo-004') {
 		compile project(":spring-context")
 	}
 }
+
+project(':demo-005') {
+	dependencies {
+		compile project(":spring-context")
+	}
+}
