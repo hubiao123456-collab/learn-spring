@@ -15,21 +15,21 @@ import javax.annotation.PostConstruct;
 @Component
 public class Bean01 implements InitializingBean, ApplicationContextAware, ApplicationListener<ApplicationEvent> {
 
-//	@Autowired
-//	private Bean02 bean02;
-
 	public Bean01() {
 		Utils.log("%s construct", getClassName());
 	}
 
 	@PostConstruct
 	public void postConstruct() {
+		Utils.sleep(2000);
 		Utils.log("%s @PostConstruct", getClassName());
+
 	}
 
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
+		Utils.sleep(3000);
 		Utils.log("%s InitializingBean.afterPropertiesSet", getClassName());
 	}
 

@@ -5,7 +5,7 @@ import java.time.LocalTime;
 public class Utils {
 
 	public static void log(String format, Object... args) {
-		// 当前线程名称
+		// 当前线程名称@线程id
 		String threadName = Thread.currentThread().getName()+"@"+Thread.currentThread().getId();
 		// 为了方便打印结果的查看，若线程名长度不足16，则补空格
 		while (threadName.length() < 16) {
