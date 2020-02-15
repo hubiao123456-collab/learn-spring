@@ -1,5 +1,5 @@
 一些示例代码
 
 
-* [Spring 教程](https://lttdev.cn/spring/)
-* [Spring Boot 教程](https://lttdev.cn/spring-boot/)
+* [Spring 笔记](https://www.letianbiji.com/spring/)
+* [Spring Boot 笔记](https://www.letianbiji.com/spring-boot/)
